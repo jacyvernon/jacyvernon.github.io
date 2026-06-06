@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work | Jacy Vernon</title>
+    <meta name="description" content="Artwork portfolio grid for Jacy Vernon.">
+    <meta property="og:title" content="Work | Jacy Vernon">
+    <meta property="og:description" content="Browse selected artwork by Jacy Vernon.">
+    <meta property="og:image" content="assets/img/work/work-01-placeholder.svg">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-name" href="index.html">Jacy Vernon</a>
+        <!-- Future name mark: replace the text link above with an image/SVG logo if desired. -->
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="work.html" aria-current="page">Work</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="container work-section" aria-labelledby="work-heading">
+        <h1 id="work-heading" class="page-title">Work</h1>
+        <div class="work-grid" id="work-grid" aria-live="polite"></div>
+        <p class="fallback-message" id="work-fallback" hidden>Artwork will appear here when the gallery data loads.</p>
+      </section>
+    </main>
+
+    <div class="modal" id="art-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <button class="modal-close" type="button" aria-label="Close larger image view">Close</button>
+      <figure class="modal-content">
+        <img id="modal-image" src="" alt="">
+        <figcaption class="art-caption modal-caption">
+          <span id="modal-title"></span>
+          <span id="modal-details"></span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

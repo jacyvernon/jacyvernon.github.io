@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+  <title id="title">Artwork placeholder one</title>
+  <desc id="desc">Abstract artwork placeholder with line and muted shapes.</desc>
+  <rect width="900" height="700" fill="#f4f4f1"/>
+  <path d="M142 502 C240 390 306 460 398 314 C496 156 604 214 742 116" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="262" cy="238" r="70" fill="#d6cdc0"/>
+  <rect x="572" y="390" width="152" height="104" fill="#b8c1bd"/>
+</svg>

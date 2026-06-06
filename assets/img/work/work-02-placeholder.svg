@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="900" viewBox="0 0 700 900" role="img" aria-labelledby="title desc">
+  <title id="title">Artwork placeholder two</title>
+  <desc id="desc">Vertical abstract artwork placeholder with stacked forms.</desc>
+  <rect width="700" height="900" fill="#f2f2ef"/>
+  <rect x="132" y="128" width="246" height="326" fill="#c8d0cf"/>
+  <circle cx="424" cy="462" r="108" fill="#ddd6cb"/>
+  <path d="M188 704 C260 594 344 640 402 534 C454 438 520 430 576 366" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+</svg>

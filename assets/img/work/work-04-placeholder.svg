@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 720 900" role="img" aria-labelledby="title desc">
+  <title id="title">Artwork placeholder four</title>
+  <desc id="desc">Vertical abstract artwork placeholder with soft shapes and dark line.</desc>
+  <rect width="720" height="900" fill="#f5f5f2"/>
+  <path d="M168 178 C284 208 256 348 360 392 C470 438 408 620 548 668" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="256" cy="548" r="94" fill="#d7cfc3"/>
+  <rect x="416" y="202" width="126" height="206" fill="#b8c1bd"/>
+</svg>

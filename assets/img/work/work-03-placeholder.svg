@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Artwork placeholder three</title>
+  <desc id="desc">Horizontal abstract artwork placeholder with restrained geometric composition.</desc>
+  <rect width="900" height="620" fill="#f6f6f4"/>
+  <rect x="120" y="130" width="220" height="270" fill="#d9d1c4"/>
+  <rect x="484" y="188" width="214" height="188" fill="#bec7c2"/>
+  <path d="M126 486 C258 372 326 438 430 306 C514 202 636 230 768 126" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+</svg>

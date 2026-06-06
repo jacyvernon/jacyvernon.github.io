@@ -1,0 +1,283 @@
+:root {
+  --color-text: #111111;
+  --color-muted: #555555;
+  --color-border: #e7e7e7;
+  --color-background: #ffffff;
+  --container-width: 1120px;
+  --side-margin: clamp(20px, 5vw, 56px);
+  --header-height: 76px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  /* Typography can be changed here later. Keep the stack lightweight and readable. */
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: min(calc(100% - (var(--side-margin) * 2)), var(--container-width));
+  margin-inline: auto;
+}
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid transparent;
+}
+
+.header-inner {
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-name {
+  flex: 0 0 auto;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(16px, 3vw, 34px);
+  font-size: 13px;
+}
+
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.site-main {
+  padding-top: var(--header-height);
+}
+
+.home-feature {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding-block: clamp(56px, 10vw, 116px);
+}
+
+.featured-work {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.featured-work img,
+.work-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.art-caption {
+  margin-top: 12px;
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.art-caption span {
+  display: block;
+}
+
+.work-section,
+.text-page {
+  padding-block: clamp(48px, 8vw, 88px);
+}
+
+.page-title {
+  margin: 0 0 36px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(34px, 5vw, 64px) clamp(24px, 4vw, 44px);
+  align-items: start;
+}
+
+.work-card {
+  margin: 0;
+}
+
+.work-button {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: zoom-in;
+  text-align: left;
+}
+
+.work-button:focus-visible {
+  outline: 1px solid var(--color-text);
+  outline-offset: 6px;
+}
+
+.text-page {
+  max-width: 720px;
+}
+
+.text-page p {
+  margin: 0 0 1.25rem;
+}
+
+.text-page a {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.fallback-message {
+  color: var(--color-muted);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(20px, 4vw, 48px);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-content {
+  width: min(100%, 1120px);
+  max-height: calc(100vh - 96px);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 170px);
+  object-fit: contain;
+}
+
+.modal-caption {
+  align-self: flex-start;
+}
+
+.modal-close {
+  position: fixed;
+  top: 18px;
+  right: var(--side-margin);
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  .header-inner {
+    gap: 18px;
+  }
+
+  .site-name {
+    font-size: 14px;
+  }
+
+  .site-nav {
+    gap: 14px;
+    font-size: 12px;
+  }
+
+  .home-feature {
+    align-items: flex-start;
+    padding-block: 38px 56px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
