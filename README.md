@@ -79,7 +79,7 @@ For a future handwritten name mark:
 4. Replace the text link in each page header with an image link.
 5. Keep the image alt text short, such as `Jacy Vernon`.
 
-There is a placeholder file at `assets/img/branding/jacy-vernon-name-placeholder.svg`.
+The current logo file is `assets/img/branding/jacy_logo.svg`.
 
 ## Change The Favicon
 

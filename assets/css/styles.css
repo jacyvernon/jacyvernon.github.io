@@ -3,9 +3,9 @@
   --color-muted: #555555;
   --color-border: #e7e7e7;
   --color-background: #ffffff;
-  --container-width: 1120px;
+  --container-width: 880px;
   --side-margin: clamp(20px, 5vw, 56px);
-  --header-height: 76px;
+  --header-height: 92px;
 }
 
 * {
@@ -68,11 +68,17 @@ img {
   gap: 24px;
 }
 
-.site-name {
+.site-logo {
   flex: 0 0 auto;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  width: clamp(156px, 22vw, 230px);
+}
+
+.site-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .site-nav {
@@ -100,7 +106,7 @@ img {
 }
 
 .featured-work {
-  width: min(760px, 100%);
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -254,11 +260,11 @@ img {
   }
 
   .header-inner {
-    gap: 18px;
+    gap: 14px;
   }
 
-  .site-name {
-    font-size: 14px;
+  .site-logo {
+    width: clamp(124px, 36vw, 154px);
   }
 
   .site-nav {
