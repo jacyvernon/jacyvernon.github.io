@@ -69,7 +69,7 @@ New photos do not appear automatically: add them to `gallery.json`. Files in `wo
 - All pages use `/favicon.ico?v=apple-2` for the browser icon. The small ICO is derived from the same apple drawing. Keep the root `favicon.ico` and former `assets/favicon/favicon.svg` URL showing the apple too, so browser fallback requests and older cached pages receive the same icon.
 - Change layout and styling in `assets/css/styles.css`.
 
-The Home page features the self-portrait bust, with no visible caption. It does not scroll; the artwork scales to fit between the header and footer.
+The Home page features the self-portrait bust, with no visible caption.
 
 The site background is `assets/images/backgrounds/website-cover.svg`, copied from `custom_assets/website cover.svg`. The stylesheet selects it through `--site-background`. Keep original design files in `custom_assets/` and display assets in `assets/images/`.
 
