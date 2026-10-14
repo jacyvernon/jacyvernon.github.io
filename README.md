@@ -1,49 +1,65 @@
 # Jacy Vernon Website
 
-A simple static artist portfolio site for GitHub Pages. It uses plain HTML, CSS, and a small amount of vanilla JavaScript only.
+A static artist portfolio for GitHub Pages. The site uses HTML, one shared stylesheet, and a gallery script. There is no server backend, database, package installation, or build step.
 
-## Preview Locally
+## Preview locally
 
-From the repository root, run:
+From this folder, run:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Open `http://localhost:8000`. Use the server instead of opening HTML files directly: the Work page fetches `content/works.json`.
 
-Using a local server is recommended because the Work page loads artwork data from `assets/data/works.json`.
+## File map
 
-## Enable GitHub Pages
+```text
+index.html                         Home page and featured artwork
+work.html                          Gallery page and larger image view
+about.html                         Artist biography
+contact.html                       Contact details
+content/
+  works.json                       Gallery titles, captions, and image paths
+assets/
+  css/styles.css                   Shared layout, typography, and background
+  js/gallery.js                    Gallery loading and larger image view
+  images/
+    backgrounds/website-cover.svg  Site-wide background
+    branding/jacy_logo.svg          Header logo
+    home/                          Featured artwork images
+    work/                          Gallery images
+  favicon/favicon.svg              Browser icon
+custom_assets/                      Original supplied design files
+.nojekyll                           Serve the site directly on GitHub Pages
+.gitignore                          Exclude local development clutter
+```
 
-1. Push the site to the `main` branch.
-2. In GitHub, go to Settings -> Pages.
-3. Choose Deploy from branch.
-4. Select `main` and `/root`.
-5. Save.
+Page URLs stay at the root. All pages share `assets/css/styles.css`. Only the Work page loads `assets/js/gallery.js`.
 
-The site uses relative links so it can work from the repository root on GitHub Pages. No custom domain is assumed yet.
+## Change the background
 
-## Replace The Home Page Image
+The display copy of `custom_assets/website cover.svg` is `assets/images/backgrounds/website-cover.svg`. All four pages use it through the `--site-background` variable in `assets/css/styles.css`.
 
-1. Add the new display image to `assets/img/home/`.
-2. Open `index.html`.
-3. Replace `assets/img/home/featured-placeholder.svg` with the new image path.
-4. Update the `width`, `height`, and `alt` attributes.
-5. Replace the caption text below the image.
+The cover fills a fixed background layer. It keeps its aspect ratio and crops to fit each screen. It remains visible while a page scrolls. The header has a solid white background to keep the navigation readable.
 
-Write alt text as a short description of what is visible in the artwork, not just the title.
+To replace it, update the display file or change `--site-background`. CSS image paths are relative to the stylesheet, so the current path starts with `../images/`.
 
-## Add Works To The Work Page
+## Edit page content
 
-The Work page is rendered from `assets/data/works.json`.
+- Home: edit the image, alt text, dimensions, and caption in `index.html`.
+- About: edit the paragraphs in `about.html`.
+- Contact: edit the email link in `contact.html`.
+- Navigation or logo: update the header in all four HTML files.
+- Layout, colors, and typography: edit `assets/css/styles.css`.
 
-1. Add web-ready images to `assets/img/work/`.
-2. Open `assets/data/works.json`.
-3. Add or edit an object with `title`, `year`, `medium`, `dimensions`, `image`, `alt`, `width`, and `height`.
-4. Keep the JSON syntax valid: commas between entries, no trailing comma after the last entry.
+The current artwork and biography are placeholders. Replace them before sharing the portfolio as finished work.
 
-Example:
+## Add artwork
+
+1. Put a web-ready image in `assets/images/work/`.
+2. Add an entry to `content/works.json`.
+3. Preview the Work page and open the image to check its caption and size.
 
 ```json
 {
@@ -51,66 +67,31 @@ Example:
   "year": "2026",
   "medium": "Oil on panel",
   "dimensions": "24 x 30 in",
-  "image": "assets/img/work/artwork-title.webp",
-  "alt": "Abstract painting with dark line work and muted green shapes",
+  "image": "assets/images/work/artwork-title.webp",
+  "alt": "Abstract painting with dark lines and muted green shapes",
   "width": 1200,
   "height": 900
 }
 ```
 
-## Replace Placeholder Captions
+Entries appear in file order. Keep valid JSON: put commas between entries and omit trailing commas. Image paths are relative to the page at the site root. Use the actual image dimensions and describe what is visible in the alt text.
 
-Home page captions are edited directly in `index.html`.
+For the Home page, place the image in `assets/images/home/` and update both the featured image and the `og:image` metadata in `index.html`.
 
-Work page captions come from `assets/data/works.json`:
+## Keep assets tidy
 
-- `title` and `year` create the first caption line.
-- `medium` and `dimensions` create the second caption line.
+Use lowercase filenames with hyphens for display assets. Keep images in the folder that matches their purpose. Export artwork as WebP when practical, preserve its aspect ratio, and aim for roughly 300 KB to 1 MB per display image.
 
-## Add A Handwritten Name Mark
+Keep supplied design originals in `custom_assets/`; the site does not reference that folder. Put the display version in `assets/images/`. Keep large artwork originals outside this repository.
 
-The current header uses text: `Jacy Vernon`.
+The favicon is `assets/favicon/favicon.svg`. If its filename changes, update the icon link in all four HTML files.
 
-For a future handwritten name mark:
+## Publish with GitHub Pages
 
-1. Add the logo file to `assets/img/branding/`.
-2. SVG is best if the mark should behave like a clean logo.
-3. Use a transparent PNG or WebP if preserving scan texture is more important.
-4. Replace the text link in each page header with an image link.
-5. Keep the image alt text short, such as `Jacy Vernon`.
+The repository is `jacyvernon/jacyvernon.github.io`. GitHub Pages serves it at `https://jacyvernon.com/`. The `CNAME` file holds the custom domain; keep it when editing or reorganizing the site.
 
-The current logo file is `assets/img/branding/jacy_logo.svg`.
+1. Push the finished changes to `main`.
+2. In GitHub, open **Settings → Pages**.
+3. Select **Deploy from a branch**, then `main` and `/ (root)`.
 
-## Change The Favicon
-
-1. Add the new favicon file to `assets/favicon/`.
-2. Update the `<link rel="icon">` path in each HTML page if the filename changes.
-3. Use a square icon. For PNG, use at least 48 x 48 px.
-
-The current default favicon is `assets/favicon/favicon.svg`.
-
-## Image Optimization
-
-- Keep original high-resolution artwork files outside the repo.
-- Export web display images as WebP when possible.
-- Keep each display image roughly under 300 KB to 1 MB when possible.
-- Preserve the original aspect ratio.
-- Use descriptive filenames, such as `untitled-2026-oil-panel.webp`.
-- Add artwork metadata in `assets/data/works.json`.
-
-## Site Structure
-
-```text
-/
-  index.html
-  work.html
-  about.html
-  contact.html
-  assets/
-    css/styles.css
-    js/main.js
-    data/works.json
-    img/
-    favicon/
-```
-
+No build command is needed. Relative links work from the site root and from a GitHub Pages project subdirectory.

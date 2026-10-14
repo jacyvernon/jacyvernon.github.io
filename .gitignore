@@ -1,0 +1,8 @@
+# macOS metadata
+.DS_Store
+
+# Local development output
+__pycache__/
+.venv/
+node_modules/
+

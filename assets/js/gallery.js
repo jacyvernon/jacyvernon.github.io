@@ -79,7 +79,7 @@
     return figure;
   }
 
-  fetch("assets/data/works.json")
+  fetch("content/works.json")
     .then(function (response) {
       if (!response.ok) throw new Error("Gallery data could not be loaded.");
       return response.json();
