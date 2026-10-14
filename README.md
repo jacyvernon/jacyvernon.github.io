@@ -2,6 +2,8 @@
 
 A static artist portfolio for GitHub Pages. No installation or build step is needed.
 
+Navigation uses `/` for Home and `/work`, `/about`, and `/contact` for the other pages. GitHub Pages serves the existing HTML files at these extensionless URLs. The `.html` URLs still work for existing links. The local Python server uses the `.html` filenames.
+
 ## Preview locally
 
 Run this command from the repository folder:
