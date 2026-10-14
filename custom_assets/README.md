@@ -4,7 +4,7 @@ This folder keeps the supplied files under their original names:
 
 - `website cover.svg` and `website cover.jpg`: background design.
 - `written name.svg` and `written name.jpg`: handwritten name design.
-- `apple pencil sketch favicon.svg`: original apple drawing. The footer and browser icon use a display copy at `assets/images/branding/apple-sketch.svg`.
+- `apple pencil sketch favicon.svg`: original apple drawing. The footer uses a display copy at `assets/images/branding/apple-sketch.svg`. The browser icon is a small version of the same drawing at `/favicon.ico`, with an SVG copy at the former `assets/favicon/favicon.svg` URL.
 
 The site uses a display copy of the SVG cover at `assets/images/backgrounds/website-cover.svg`. It uses the existing header logo at `assets/images/branding/jacy_logo.svg`.
 

@@ -27,8 +27,10 @@ assets/
   css/styles.css                 Shared layout and styling
   js/gallery.js                  Gallery loading and enlarged image view
   images/backgrounds/            Site background
-  images/branding/               Header logo and apple (footer and browser icon)
+  images/branding/               Header logo and footer apple
   images/home/                   Home page image
+  favicon/favicon.svg            Apple icon for the former favicon URL
+favicon.ico                      Apple browser icon (16, 32, and 48 pixels)
 custom_assets/                   Original supplied design files
 CNAME                            Custom domain for GitHub Pages
 ```
@@ -63,7 +65,8 @@ New photos do not appear automatically: add them to `gallery.json`. Files in `wo
 - Edit page text directly in its HTML file.
 - Change the Home image and its `og:image` metadata in `index.html`.
 - Update the header in all four HTML files to change navigation or the logo.
-- Each page uses the apple as its browser icon and centered footer image from `assets/images/branding/apple-sketch.svg`. Its width is about one third of a gallery photo, with a 48px minimum on small screens.
+- Each page has a centered footer apple from `assets/images/branding/apple-sketch.svg`. Its width is about one third of a gallery photo, with a 48px minimum on small screens.
+- All pages use `/favicon.ico?v=apple-2` for the browser icon. The small ICO is derived from the same apple drawing. Keep the root `favicon.ico` and former `assets/favicon/favicon.svg` URL showing the apple too, so browser fallback requests and older cached pages receive the same icon.
 - Change layout and styling in `assets/css/styles.css`.
 
 The Home page features the self-portrait bust, with no visible caption. It does not scroll; the artwork scales to fit between the header and footer.
