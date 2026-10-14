@@ -40,5 +40,35 @@
     "alt": "Blue and cream ceramic bird-shaped pitcher with a curved handle",
     "width": 4284,
     "height": 4828
+  },
+  {
+    "image": "work/woven-wall-hanging.jpg",
+    "alt": "Woven wall hanging with green, yellow, cream, and gray bands, flowers, grasses, and fringe",
+    "width": 1440,
+    "height": 1800
+  },
+  {
+    "image": "work/black-bird-wall-sculpture.jpg",
+    "alt": "Black bird wall sculpture with outstretched wings and a hanging brass bell",
+    "width": 3555,
+    "height": 2666
+  },
+  {
+    "image": "work/stacked-objects-sculpture.jpg",
+    "alt": "Tall colorful sculpture of stacked everyday objects, including a clock, books, cans, and a large hand",
+    "width": 3024,
+    "height": 4032
+  },
+  {
+    "image": "work/stacked-objects-books-detail.jpg",
+    "alt": "Detail of painted books and patterned fabric in the stacked objects sculpture",
+    "width": 4032,
+    "height": 3024
+  },
+  {
+    "image": "work/stacked-objects-cans-detail.jpg",
+    "alt": "Detail of painted food cans and fruit in the stacked objects sculpture",
+    "width": 3386,
+    "height": 2539
   }
 ]
