@@ -67,7 +67,7 @@ New photos do not appear automatically: add them to `gallery.json`. Files in `wo
 - Each page has a centered footer apple from `assets/images/branding/apple-sketch.svg`. Its width is about one third of a gallery photo, with a 48px minimum on small screens.
 - Change layout and styling in `assets/css/styles.css`.
 
-The Home page features the self-portrait bust, with no visible caption.
+The Home page features the self-portrait bust, with no visible caption. It does not scroll; the artwork scales to fit between the header and footer.
 
 The site background is `assets/images/backgrounds/website-cover.svg`, copied from `custom_assets/website cover.svg`. The stylesheet selects it through `--site-background`. Keep original design files in `custom_assets/` and display assets in `assets/images/`.
 

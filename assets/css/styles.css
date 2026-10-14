@@ -148,6 +148,39 @@ img {
   height: auto;
 }
 
+/* Keep the homepage artwork and footer inside the visible viewport. */
+html.home-page,
+.home-page body {
+  height: 100%;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.home-page .site-header,
+.home-page .site-footer {
+  flex-shrink: 0;
+}
+
+.home-page .site-main {
+  min-height: 0;
+}
+
+.home-page .home-feature {
+  height: 100%;
+  min-height: 0;
+  padding-block: clamp(12px, 3vh, 32px);
+}
+
+.home-page .featured-work {
+  height: 100%;
+}
+
+.home-page .featured-work img {
+  height: 100%;
+  object-fit: contain;
+}
+
 .work-section,
 .text-page {
   padding-block: clamp(48px, 8vw, 88px);
