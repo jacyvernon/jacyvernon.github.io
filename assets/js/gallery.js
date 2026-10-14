@@ -36,7 +36,7 @@
     return button;
   }
 
-  fetch("work/gallery.json")
+  fetch("work/gallery.json", { cache: "no-cache" })
     .then(function (response) {
       if (!response.ok) throw new Error("Gallery data could not be loaded.");
       return response.json();
