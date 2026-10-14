@@ -55,7 +55,7 @@ Use the actual pixel dimensions. Alt text describes the image for screen readers
 
 The gallery always has three columns, including on small screens. Photos keep their original proportions and are not cropped. The original resolution is retained; the browser scales each photo to fit its column. Clicking a photo opens a larger view that fits the screen. Click outside the photo, click Close, or press Escape to return to the gallery.
 
-Three supplied files had JPEG extensions but contained HEIC images. Their untouched source files are in `work/originals/`; the gallery uses JPEG conversions with the same pixel dimensions. The other five supplied photos were renamed without changing their contents.
+Three supplied files had JPEG extensions but contained HEIC images. Their untouched source files are in `work/originals/`; the gallery uses JPEG conversions with the same pixel dimensions. The other five supplied photos were renamed without changing their contents. The self-portrait bust is displayed on the Home page in `assets/images/home/`.
 
 New photos do not appear automatically: add them to `gallery.json`. Files in `work/originals/` are not listed in the gallery.
 
@@ -66,7 +66,7 @@ New photos do not appear automatically: add them to `gallery.json`. Files in `wo
 - Update the header in all four HTML files to change navigation or the logo.
 - Change layout and styling in `assets/css/styles.css`.
 
-The Home artwork and About biography still contain placeholders.
+The Home page features the self-portrait bust, with no visible caption.
 
 The site background is `assets/images/backgrounds/website-cover.svg`, copied from `custom_assets/website cover.svg`. The stylesheet selects it through `--site-background`. Keep original design files in `custom_assets/` and display assets in `assets/images/`.
 
