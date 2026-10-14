@@ -1,0 +1,50 @@
+[
+  {
+    "image": "work/green-apple-vessel.jpg",
+    "alt": "White ceramic vessel with a green apple and dark leaf on top",
+    "width": 2343,
+    "height": 2628
+  },
+  {
+    "image": "work/striped-apple-vessel.jpg",
+    "alt": "White ceramic vessel with a red and cream striped apple on top",
+    "width": 2867,
+    "height": 3716
+  },
+  {
+    "image": "work/red-apple-vessel.jpg",
+    "alt": "Tall white ceramic vessel with a red apple and dark leaf on top",
+    "width": 2446,
+    "height": 3518
+  },
+  {
+    "image": "work/ribbed-teapot.jpg",
+    "alt": "Brown ribbed ceramic teapot with a lid and sculpted side handles",
+    "width": 2709,
+    "height": 2727
+  },
+  {
+    "image": "work/painted-teapot.jpg",
+    "alt": "Painted ceramic teapot with a tall dark loop handle",
+    "width": 2844,
+    "height": 3244
+  },
+  {
+    "image": "work/long-neck-vase.jpg",
+    "alt": "Mottled ceramic vase with a rounded body and slender neck",
+    "width": 3024,
+    "height": 3608
+  },
+  {
+    "image": "work/bird-pitcher.jpg",
+    "alt": "Blue and cream ceramic bird-shaped pitcher with a curved handle",
+    "width": 4284,
+    "height": 4828
+  },
+  {
+    "image": "work/self-portrait-bust.jpg",
+    "alt": "Painted ceramic bust with one hand raised and the other resting under the chin",
+    "width": 2640,
+    "height": 2101
+  }
+]

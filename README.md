@@ -1,97 +1,77 @@
 # Jacy Vernon Website
 
-A static artist portfolio for GitHub Pages. The site uses HTML, one shared stylesheet, and a gallery script. There is no server backend, database, package installation, or build step.
+A static artist portfolio for GitHub Pages. No installation or build step is needed.
 
 ## Preview locally
 
-From this folder, run:
+Run this command from the repository folder:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000`. Use the server instead of opening HTML files directly: the Work page fetches `content/works.json`.
+Open http://localhost:8000/work.html. Use the server because the gallery loads a JSON file.
 
 ## File map
 
 ```text
-index.html                         Home page and featured artwork
-work.html                          Gallery page and larger image view
-about.html                         Artist biography
-contact.html                       Contact details
-content/
-  works.json                       Gallery titles, captions, and image paths
+index.html                       Home page
+work.html                        Gallery page
+about.html                       Artist biography
+contact.html                     Contact details
+work/
+  *.jpg                          Full-resolution gallery photos
+  gallery.json                   Photo order, paths, alt text, and pixel dimensions
+  originals/*.heic                Preserved HEIC source files
 assets/
-  css/styles.css                   Shared layout, typography, and background
-  js/gallery.js                    Gallery loading and larger image view
-  images/
-    backgrounds/website-cover.svg  Site-wide background
-    branding/jacy_logo.svg          Header logo
-    home/                          Featured artwork images
-    work/                          Gallery images
-  favicon/favicon.svg              Browser icon
-custom_assets/                      Original supplied design files
-.nojekyll                           Serve the site directly on GitHub Pages
-.gitignore                          Exclude local development clutter
+  css/styles.css                 Shared layout and styling
+  js/gallery.js                  Gallery loading and enlarged image view
+  images/backgrounds/            Site background
+  images/branding/               Header logo
+  images/home/                   Home page image
+  favicon/                       Browser icon
+custom_assets/                   Original supplied design files
+CNAME                            Custom domain for GitHub Pages
 ```
 
-Page URLs stay at the root. All pages share `assets/css/styles.css`. Only the Work page loads `assets/js/gallery.js`.
+## Change the gallery
 
-## Change the background
-
-The display copy of `custom_assets/website cover.svg` is `assets/images/backgrounds/website-cover.svg`. All four pages use it through the `--site-background` variable in `assets/css/styles.css`.
-
-The cover fills a fixed background layer. It keeps its aspect ratio and crops to fit each screen. It remains visible while a page scrolls. The header has a solid white background to keep the navigation readable.
-
-To replace it, update the display file or change `--site-background`. CSS image paths are relative to the stylesheet, so the current path starts with `../images/`.
-
-## Edit page content
-
-- Home: edit the image, alt text, dimensions, and caption in `index.html`.
-- About: edit the paragraphs in `about.html`.
-- Contact: edit the email link in `contact.html`.
-- Navigation or logo: update the header in all four HTML files.
-- Layout, colors, and typography: edit `assets/css/styles.css`.
-
-The current artwork and biography are placeholders. Replace them before sharing the portfolio as finished work.
-
-## Add artwork
-
-1. Put a web-ready image in `assets/images/work/`.
-2. Add an entry to `content/works.json`.
-3. Preview the Work page and open the image to check its caption and size.
+1. Put a JPEG, PNG, or WebP photo in `work/`. Use a short name with hyphens.
+2. Add its entry to `work/gallery.json`.
+3. Preview the gallery and click the photo to check the enlarged view.
 
 ```json
 {
-  "title": "Artwork Title",
-  "year": "2026",
-  "medium": "Oil on panel",
-  "dimensions": "24 x 30 in",
-  "image": "assets/images/work/artwork-title.webp",
-  "alt": "Abstract painting with dark lines and muted green shapes",
-  "width": 1200,
-  "height": 900
+  "image": "work/bird-pitcher.jpg",
+  "alt": "Blue and cream ceramic bird-shaped pitcher with a curved handle",
+  "width": 4284,
+  "height": 4828
 }
 ```
 
-Entries appear in file order. Keep valid JSON: put commas between entries and omit trailing commas. Image paths are relative to the page at the site root. Use the actual image dimensions and describe what is visible in the alt text.
+Entries appear in file order, from left to right across each row. Reorder entries to change the layout; remove an entry to hide a photo. Keep commas between entries and omit the final trailing comma.
 
-For the Home page, place the image in `assets/images/home/` and update both the featured image and the `og:image` metadata in `index.html`.
+Use the actual pixel dimensions. Alt text describes the image for screen readers; it is not a visible caption.
 
-## Keep assets tidy
+The gallery always has three columns, including on small screens. Photos keep their original proportions and are not cropped. The original resolution is retained; the browser scales each photo to fit its column. Clicking a photo opens a larger view that fits the screen. Click outside the photo, click Close, or press Escape to return to the gallery.
 
-Use lowercase filenames with hyphens for display assets. Keep images in the folder that matches their purpose. Export artwork as WebP when practical, preserve its aspect ratio, and aim for roughly 300 KB to 1 MB per display image.
+Three supplied files had JPEG extensions but contained HEIC images. Their untouched source files are in `work/originals/`; the gallery uses JPEG conversions with the same pixel dimensions. The other five supplied photos were renamed without changing their contents.
 
-Keep supplied design originals in `custom_assets/`; the site does not reference that folder. Put the display version in `assets/images/`. Keep large artwork originals outside this repository.
+New photos do not appear automatically: add them to `gallery.json`. Files in `work/originals/` are not listed in the gallery.
 
-The favicon is `assets/favicon/favicon.svg`. If its filename changes, update the icon link in all four HTML files.
+## Edit other pages
+
+- Edit page text directly in its HTML file.
+- Change the Home image and its `og:image` metadata in `index.html`.
+- Update the header in all four HTML files to change navigation or the logo.
+- Change layout and styling in `assets/css/styles.css`.
+
+The Home artwork and About biography still contain placeholders.
+
+The site background is `assets/images/backgrounds/website-cover.svg`, copied from `custom_assets/website cover.svg`. The stylesheet selects it through `--site-background`. Keep original design files in `custom_assets/` and display assets in `assets/images/`.
 
 ## Publish with GitHub Pages
 
-The repository is `jacyvernon/jacyvernon.github.io`. GitHub Pages serves it at `https://jacyvernon.com/`. The `CNAME` file holds the custom domain; keep it when editing or reorganizing the site.
+The repository is `jacyvernon/jacyvernon.github.io`, served at https://jacyvernon.com/.
 
-1. Push the finished changes to `main`.
-2. In GitHub, open **Settings → Pages**.
-3. Select **Deploy from a branch**, then `main` and `/ (root)`.
-
-No build command is needed. Relative links work from the site root and from a GitHub Pages project subdirectory.
+Push the finished changes to `main`. In GitHub **Settings → Pages**, use **Deploy from a branch**, `main`, and `/ (root)`. Keep `CNAME` and `.nojekyll` in the repository root.
