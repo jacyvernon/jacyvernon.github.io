@@ -113,3 +113,4 @@ The current default favicon is `assets/favicon/favicon.svg`.
     img/
     favicon/
 ```
+
