@@ -67,7 +67,8 @@ New photos do not appear automatically: add them to `gallery.json`. Files in `wo
 - Edit page text directly in its HTML file.
 - Change the Home image and its `og:image` metadata in `index.html`.
 - Update the header in all four HTML files to change navigation or the logo.
-- Each page has a centered footer apple from `assets/images/branding/apple-sketch.svg`. Its width is about one third of a gallery photo, with a 48px minimum on small screens.
+- The home page fits the viewport without scrolling and has no footer apple. Its artwork scales to keep the full image visible.
+- The other pages have a centered footer apple from `assets/images/branding/apple-sketch.svg`. Its width is about one third of a gallery photo, with a 48px minimum on small screens.
 - All pages use `/favicon.ico?v=apple-2` for the browser icon. The small ICO is derived from the same apple drawing. Keep the root `favicon.ico` and former `assets/favicon/favicon.svg` URL showing the apple too, so browser fallback requests and older cached pages receive the same icon.
 - Change layout and styling in `assets/css/styles.css`.
 
